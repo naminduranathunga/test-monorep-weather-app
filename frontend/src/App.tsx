@@ -267,7 +267,7 @@ function App() {
     <div className="app-container">
       <div className="weather-card">
         {/* Title */}
-        <h1 style={{ marginBottom: '1.5rem', textAlign: 'center', fontSize: '2rem', color: '#f8fafc', fontWeight: 700, letterSpacing: '-0.03em' }}>
+        <h1 style={{ marginBottom: '1.5rem', textAlign: 'center', fontSize: '2rem', color: 'var(--text-primary)', fontWeight: 700, letterSpacing: '-0.03em' }}>
           SkyCast Weather
         </h1>
 

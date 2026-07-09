@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --primary: #6366f1;
-  --primary-hover: #4f46e5;
-  --primary-glow: rgba(99, 102, 241, 0.3);
-  --bg-gradient: linear-gradient(135deg, #090d16 0%, #15132e 50%, #0d0b18 100%);
-  --glass: rgba(255, 255, 255, 0.03);
-  --glass-hover: rgba(255, 255, 255, 0.06);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --accent-blue: #38bdf8;
-  --accent-yellow: #fbbf24;
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --primary-glow: rgba(79, 70, 229, 0.12);
+  --bg-gradient: linear-gradient(135deg, #f1f5f9 0%, #e0f2fe 50%, #e0e7ff 100%);
+  --glass: rgba(255, 255, 255, 0.65);
+  --glass-hover: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.7);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --accent-blue: #0284c7;
+  --accent-yellow: #ca8a04;
 }
 
 * {
@@ -32,7 +32,10 @@ body {
   padding: 2rem 1rem;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: 'Outfit', sans-serif;
 }
 
@@ -43,17 +46,17 @@ h1, h2, h3, h4 {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.01);
+  background: rgba(0, 0, 0, 0.02);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.15);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(99, 102, 241, 0.3);
+  background: rgba(79, 70, 229, 0.4);
 }
 
 /* Core Dashboard Layout */
@@ -71,7 +74,7 @@ h1, h2, h3, h4 {
   border: 1px solid var(--glass-border);
   border-radius: 28px;
   padding: 2.5rem;
-  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 25px 60px -15px rgba(15, 23, 42, 0.06);
   transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
@@ -84,7 +87,7 @@ h1, h2, h3, h4 {
 }
 
 .current-weather-panel {
-  background: rgba(255, 255, 255, 0.015);
+  background: rgba(255, 255, 255, 0.45);
   border: 1px solid var(--glass-border);
   border-radius: 24px;
   padding: 2rem 1.5rem;
@@ -125,6 +128,7 @@ h1, h2, h3, h4 {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+
   .current-weather-panel {
     align-self: auto;
   }
@@ -144,7 +148,7 @@ h1, h2, h3, h4 {
 }
 
 .suggestion-chip {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.6);
   border: 1px solid var(--glass-border);
   border-radius: 20px;
   padding: 0.45rem 1.1rem;
@@ -156,11 +160,11 @@ h1, h2, h3, h4 {
 }
 
 .suggestion-chip:hover {
-  background: rgba(99, 102, 241, 0.15);
+  background: rgba(79, 70, 229, 0.08);
   border-color: var(--primary);
-  color: var(--text-primary);
+  color: var(--primary);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.12);
 }
 
 .search-wrapper {
@@ -187,11 +191,11 @@ h1, h2, h3, h4 {
 
 input {
   width: 100%;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.55);
   border: 1px solid var(--glass-border);
   border-radius: 16px;
   padding: 0.9rem 1rem 0.9rem 3rem;
-  color: white;
+  color: var(--text-primary);
   font-family: inherit;
   font-size: 1rem;
   outline: none;
@@ -200,7 +204,7 @@ input {
 
 input:focus {
   border-color: var(--primary);
-  background: rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.85);
   box-shadow: 0 0 15px var(--primary-glow);
 }
 
@@ -298,7 +302,7 @@ button:disabled {
   font-size: 5.5rem;
   font-weight: 800;
   font-family: 'Outfit', sans-serif;
-  background: linear-gradient(to bottom, #ffffff 30%, #a5b4fc 100%);
+  background: linear-gradient(to bottom, #a5b4fc 30%, #a5b4fc 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -332,7 +336,7 @@ button:disabled {
 
 .timeline-card {
   flex: 0 0 100px;
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.45);
   border: 1px solid var(--glass-border);
   border-radius: 20px;
   padding: 1.25rem 0.75rem;
@@ -347,12 +351,12 @@ button:disabled {
 
 .timeline-card:hover {
   background: var(--glass-hover);
-  border-color: rgba(99, 102, 241, 0.4);
+  border-color: rgba(79, 70, 229, 0.4);
   transform: translateY(-4px);
 }
 
 .timeline-card.active {
-  background: rgba(99, 102, 241, 0.12);
+  background: rgba(79, 70, 229, 0.1);
   border-color: var(--primary);
   box-shadow: 0 8px 20px var(--primary-glow);
   transform: translateY(-2px);
@@ -380,7 +384,7 @@ button:disabled {
 
 /* Detailed Weather Information Cards */
 .selected-details-container {
-  background: rgba(255, 255, 255, 0.01);
+  background: rgba(255, 255, 255, 0.3);
   border: 1px solid var(--glass-border);
   border-radius: 24px;
   padding: 1.5rem;
@@ -430,8 +434,8 @@ button:disabled {
 }
 
 .metric-card {
-  background: rgba(255, 255, 255, 0.015);
-  border: 1px solid rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 16px;
   padding: 1.1rem;
   display: flex;
@@ -442,7 +446,7 @@ button:disabled {
 
 .metric-card:hover {
   background: var(--glass-hover);
-  border-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.8);
 }
 
 .metric-card .icon-wrapper {
@@ -478,12 +482,10 @@ button:disabled {
 
 /* Skeleton Loading Shimmer animations */
 .skeleton {
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0.02) 25%,
-    rgba(255, 255, 255, 0.07) 37%,
-    rgba(255, 255, 255, 0.02) 63%
-  );
+  background: linear-gradient(90deg,
+      rgba(0, 0, 0, 0.03) 25%,
+      rgba(0, 0, 0, 0.07) 37%,
+      rgba(0, 0, 0, 0.03) 63%);
   background-size: 400% 100%;
   animation: shimmer 1.4s ease infinite;
 }
@@ -492,6 +494,7 @@ button:disabled {
   0% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -615,6 +618,7 @@ button:disabled {
     opacity: 0;
     transform: translateY(12px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
